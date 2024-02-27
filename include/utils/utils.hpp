@@ -1,6 +1,6 @@
 #pragma once
 
-#include <memory_types.hpp>
+#include <utils/memory_types.hpp>
 #include <iostream>
 
 template <typename T> int sgn(T val) {

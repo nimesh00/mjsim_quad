@@ -1,4 +1,4 @@
-#include "QuadROSComm.hpp"
+#include "communication/QuadROSComm.hpp"
 
 QuadROSComm::QuadROSComm(const DATA_ACCESS_MODE& mode) : m_name("svan"), rclcpp::Node("svan"), CommunicationManager(mode) {
     InitClass();

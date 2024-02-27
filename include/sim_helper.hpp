@@ -10,11 +10,11 @@
 #include <chrono>
 #include <thread>
 
-#include "memory_types.hpp"
+#include "utils/memory_types.hpp"
 #ifdef USE_ROS_COMM
-#include "QuadROSComm.hpp"
+#include "communication/QuadROSComm.hpp"
 #else
-#include "SHM.hpp"
+#include "communication/SHM.hpp"
 #endif
 
 #define COMPILE_WITH_VISUALIZATION

@@ -1,13 +1,13 @@
 #include "sim_helper.hpp"
-#include "utils.hpp"
+#include "utils/utils.hpp"
 #include <filesystem>
 
 #include <csignal>
 
 #ifdef USE_ROS_COMM
-#include "QuadROSComm.hpp"
+#include "communication/QuadROSComm.hpp"
 #else
-#include "SHM.hpp"
+#include "communication/SHM.hpp"
 #endif
 
 // Signal handler to gracefully handle Ctrl+C
@@ -99,7 +99,7 @@ int main(int argc, char** argv) {
 
     // std::string model_file = "/home/meshin/dev/quadruped/xterra/quadruped_locomotion/src/robots/" + m_name + "_description/mujoco/" + m_name + ".xml";
     // std::string model_file = "/home/meshin/dev/quadruped/xterra/quadruped_locomotion/src/robots/" + m_name + "_description/mujoco/scene.xml";
-    std::string rel_model_path = "src/robots/" + m_name + "_description/mujoco/scene.xml";
+    std::string rel_model_path = "mjsim_quad/robots/" + m_name + "_description/mujoco/scene.xml";
     std::filesystem::path filepath = std::filesystem::current_path().parent_path().parent_path() / rel_model_path;
     std::string model_file = filepath.string();
 

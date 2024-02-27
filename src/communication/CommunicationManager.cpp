@@ -1,4 +1,4 @@
-#include "CommunicationManager.hpp"
+#include "communication/CommunicationManager.hpp"
 
 CommunicationManager::CommunicationManager() : m_mode(DATA_ACCESS_MODE::PLANT) {
 }

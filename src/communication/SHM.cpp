@@ -1,4 +1,4 @@
-#include "SHM.hpp"
+#include "communication/SHM.hpp"
 
 SHM::SHM() : m_name("svan"), CommunicationManager(DATA_ACCESS_MODE::PLANT) {
     InitClass();
