@@ -86,3 +86,7 @@ if (DEFINED ENV{USE_ROS_COMM})
         ros_comm
     )
 endif()
+install(TARGETS simulate
+    ARCHIVE DESTINATION ${COMMON_INSTALL_DIR}
+    RUNTIME DESTINATION ${COMMON_INSTALL_DIR}
+)
